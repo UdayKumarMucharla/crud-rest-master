@@ -1,0 +1,27 @@
+
+<div class="container" id="login_div" >
+  
+    <form #form ="ngForm" materialize class="col s20" >
+          <h4>Log In </h4>
+        <div class="from-group ">
+              <label>Email</label>
+            <input id = "email" #mail="ngModel" type="text" class="validate" name="email"
+          [(ngModel)]="email" required/>
+          <!--<div *ngIf="mail.errors.pattern" class="alert alert-danger">
+          <div [hidden] ="!mail.errors.pattern" >
+            Please enter a valid Email-Id...
+          </div>
+        </div>-->
+        </div>
+         <div class="from-group">
+            <label>Password</label>
+            <input id = "pswd" type="password" class="validate" name ="pswd"
+         [(ngModel)]="pswd" required/>
+        </div>
+        <div id="btn">
+       <button [disabled]="!form.form.valid" class="btn btn-primary" (click)=log()>Log in</button>
+       <button  class="btn btn-primary" (click)=reset()>Reset</button>
+        </div>
+    </form>
+</div>
+

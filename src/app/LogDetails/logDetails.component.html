@@ -1,0 +1,49 @@
+<div class="dropdown">
+  <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
+    <div class="input-group"><input type="text" class="form-control" data-ng-model="data.dateDropDownInput"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    </div>
+  </a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <!--<datetimepicker data-ng-model="data.dateDropDownInput" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }"></datetimepicker>-->
+  </ul>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th data-field="name">UserId</th>
+    <th data-field="name">UserName</th>
+    <th data-field="name">Email</th>
+    <th data-field="name">Time</th>
+    <th data-field="name">Date</th>
+    <!--<th data-field="name">Edit</th>
+    <th data-field="name">Delete</th>-->
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let logDetails of logDetails">
+      <td>{{ logDetails[1]  }}</td>
+      <td>{{ logDetails[2] }}</td>
+      <td>{{ logDetails[3]}}</td>
+      <td>{{ logDetails[4]}}</td>
+      <td>{{ logDetails[5]}}</td>
+      <!--<td>
+        <a [routerLink]="['/users', user.id]">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </td>
+      <td>
+        <a (click)="deleteUser(user)">
+          <i class="material-icons">delete</i>
+        </a>
+      </td>-->
+    </tr>
+  </tbody>
+</table>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-large waves-effect waves-light green"
+     routerLink="/">
+    <i class="material-icons">home</i>
+  </a>
+</div>
